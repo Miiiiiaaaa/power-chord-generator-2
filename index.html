@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Power Chord Pedal</title>
+        
+        <link rel="preload" href="Digital-7.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    
+    <body>
+
+    <div class="cursor1"></div>
+
+    <div id="kurtvid-container" class="kurtvid-window">
+        <div class="kurtvid-titlebar">
+            <span class="kurtvid-title">kurt cobain</span>
+            <button class="kurtvid-minimize-btn" id="kurtvid-minimize-btn">−</button>
+        </div>
+        <iframe id=kurtvid width="420" height="315" autoplay muted loop
+            src="kurt cobain being a mood for 2 minutes straight [Nn94WNJZ578].webm">
+        </iframe>
+    </div>
+
+
+    <div>
+    <!-- cables -->
+        <div id="cableL"></div>
+        <div id="cableL1"></div>
+        <div id="cableR"></div>
+        <!-- jack-->
+        <div id="jackL"></div>
+        <!-- Grouped right-side cable/jacks so top can be moved together -->
+        <div class="right-group">
+            <div id="jackR" class="group-right"></div>
+            <div id="jackL2" class="group-right"></div>
+    </div>
+        
+        <!-- pedal -->
+        <div id="box" class="box">
+            
+            <!-- display -->
+            <div id="display">
+                <div id="screenText" class="screenText"> Gimme <br> Chord!1!1!!</div>
+            
+            <!-- chord box -->
+            <div id="box3"></div>
+            <div id="jackO1"></div>
+            <div id="display3"><img src="chords dithered/dither_it_a5.jpg" alt="chord image"></div>
+                <div id="screenText" class="screenText"> Gimme <br> Chord!1!1!!</div>
+            <!-- processor -->
+            <div id="cableO"></div>
+            <div id="jackO2"></div>
+            <div id="box2"></div>
+            
+            <!-- display processor -->
+            <div id="display2"><video id="soundwave" src="0_Waveform_Audio_1920x1080.mp4" muted playsinline></video></div>
+</div>
+
+<div>
+<!-- generator button -->
+    <div id="button" class="button"></div>
+    <element class="button" :active></element>
+    <input type="checkbox" id="ledSwitch" hidden>
+</div>
+
+<div>
+<!-- pedal name -->
+<div id="pedalname3" class="pedalname"> Power Chord</div>
+<div id="pedalname4" class="pedalname"> S.Witch</div>
+<div id="pedalname" class="pedalname"> Power Chord</div>
+<div id="pedalname2" class="pedalname"> S.Witch</div>
+</div>
+
+<div>
+<!-- led -->
+<div id="led" class="led"></div>
+
+<!-- paper note -->
+     <div id="paper"></div>
+     <!-- scribble chords -->
+     <div class=scribblechords id="scribbledA5"><img src="scribbled/scribbled chords/scribbled a5.png"></div>
+     <div class=scribblechords id="scribbledB5"><img src="scribbled/scribbled chords/scribbled b5.png"></div>
+     <div class=scribblechords id="scribbledC5"><img src="scribbled/scribbled chords/scribbled c5.png"></div>
+     <div class=scribblechords id="scribbledD5"><img src="scribbled/scribbled chords/scribbled d5.png"></div>
+     <div class=scribblechords id="scribbledE5"><img src="scribbled/scribbled chords/scribbled e5.png"></div>
+     <div class=scribblechords id="scribbledF5"><img src="scribbled/scribbled chords/scribbled f5.png"></div>
+     <div class=scribblechords id="scribbledF#5"><img src="scribbled/scribbled chords/scribbled f#5.png"></div>
+     <div class=scribblechords id="scribbledG5"><img src="scribbled/scribbled chords/scribbled g5.png"></div> 
+    <!-- scribble doodles -->
+    <div class=scribbledoodles id="scribble1"><img src="scribbled/scribbles/scribble1.png"></div>
+    <div class=scribbledoodles id="scribble2"><img src="scribbled/scribbles/scribble2.png"></div>
+    <div class=scribbledoodles id="scribble3"><img src="scribbled/scribbles/scribble3.png"></div>
+    <div class=scribbledoodles id="scribble4"><img src="scribbled/scribbles/scribble4.png"></div>
+    <div class=scribbledoodles id="scribble5"><img src="scribbled/scribbles/scribble5.png"></div>
+    <div class=scribbledoodles id="scribble6"><img src="scribbled/scribbles/scribble6.png"></div>
+    <div class=scribbledoodles id="scribble7"><img src="scribbled/scribbles/scribble7.png"></div>
+</div>
+
+<!-- kurti image flip -->
+    <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="images/dither_it_kurti.jpg" alt="Avatar" style="width:150px;height:150px;">
+    </div>
+    <div class="flip-card-back">
+    <img src="images/kurti2.jpg" alt="Avatar" style="width:150px;height:150px;">
+      <h1>Kurt Cobain</h1>
+      <p>My favourite guy if only I could see you live for once in my life <br> ༼ (༎ຶ ෴ ༎ຶ)༽</p>
+    </div>
+  </div>
+</div>
+
+<!-- play/stop buttons for video -->
+<div id="audiofield" class="audiofield"></div>
+<img src="images/musiknote.png" id="musiknote"></img> 
+<img src="images/playbutton.png" class="playbutton" id="playbutton"></img>
+<img src="images/stopbutton.png" class="playbutton" id="stopbutton"></img>
+
+</body>
+<!-- Button -> video playback handler -->
+<script src="script.js"></script>

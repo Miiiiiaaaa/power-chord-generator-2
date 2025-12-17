@@ -1,0 +1,613 @@
+@font-face {
+    font-family: 'Digital-7';
+    src: url('Digital-7.woff2') format('woff2'),
+        url('Digital-7.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Art Dystopia';
+    src: url('ArtDystopia.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+h1 {
+    font-family: Art Dystopia;
+    font-size: 40px;
+    color: #000000;
+    text-shadow: 0 0 10px #00ff00;
+}
+
+p {
+    font-family: 'Digital-7', sans-serif;
+    font-size: 20px;
+    color: #000000;
+    text-shadow: 0 0 8px #00ff00;
+}
+
+body {
+    /* Use the correct relative path to the image and encode spaces as %20. */
+    cursor: url('images/hand%20cursor.png') 16 16, auto;
+}
+
+#paper {
+    height: 650px;
+    width: 500px;
+    position: fixed;
+    left: 950px;
+    top: 50px;
+    background-image: url("images/paper.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow: auto;
+    padding: 8px;
+    box-sizing: border-box;
+    z-index: 1;
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+    cursor: url('images/pen.png') 16 16, grab;
+    overflow: hidden;
+}
+
+#scribble1{
+    left: 960px; /* change to percentage if you prefer */
+    top: 540px;   /* set a top so it doesn’t default to 0 */
+    width: auto; /* size is controlled on the img below */
+}
+
+/* The actual image keeps its original aspect ratio by setting only width or height */
+#scribble1 img {
+    width: 110px;           /* set the width you want (px, %, vw etc.) */
+    height: auto;           /* preserve original aspect ratio */
+}
+
+#scribble2{
+    left: 1285px; /* change to percentage if you prefer */
+    top: 430px;   /* set a top so it doesn’t default to 0 */
+    width: auto; /* size is controlled on the img below */
+}
+
+#scribble2 img {
+    width: 200px;           /* set the width you want (px, %, vw etc.) */
+    height: auto;           /* preserve original aspect ratio */
+}
+
+#scribble3{
+    left: 1230px; /* change to percentage if you prefer */
+    top: 500px;   /* set a top so it doesn’t default to 0 */
+    width: auto; /* size is controlled on the img below */
+}
+
+#scribble3 img {
+    width: 110px;           /* set the width you want (px, %, vw etc.) */
+    height: auto;           /* preserve original aspect ratio */
+}
+
+#scribble4{
+    left: 1190px; /* change to percentage if you prefer */
+    top: 585px;   /* set a top so it doesn’t default to 0 */
+    width: auto; /* size is controlled on the img below */
+}
+#scribble4 img {
+    width: 190px;           /* set the width you want (px, %, vw etc.) */
+    height: auto;           /* preserve original aspect ratio */
+}
+
+#scribble5{
+    left: 1000px; /* change to percentage if you prefer */
+    top: 475px;   /* set a top so it doesn’t default to 0 */
+    width: auto; /* size is controlled on the img below */
+    rotate: 30deg;
+}
+
+#scribble5 img {
+    width: 240px;           /* set the width you want (px, %, vw etc.) */
+    height: auto;           /* preserve original aspect ratio */
+}
+
+#scribble6{
+    left: 970px; /* change to percentage if you prefer */
+    top: 560px;   /* set a top so it doesn’t default to 0 */
+    width: auto; /* size is controlled on the img below */
+    rotate: -15deg;
+}
+
+#scribble6 img {
+    width: 240px;           /* set the width you want (px, %, vw etc.) */
+    height: auto;           /* preserve original aspect ratio */
+}
+
+#scribble7{
+    left: 1050px; /* change to percentage if you prefer */
+    top: 370px;   /* set a top so it doesn’t default to 0 */
+    width: auto; /* size is controlled on the img below */
+    rotate: -30deg;
+}
+
+#scribble7 img {
+    width: 300px;           /* set the width you want (px, %, vw etc.) */
+    height: auto;           /* preserve original aspect ratio */
+}
+
+.scribbledoodles {
+    display: block;         /* remove inline whitespace/padding */
+    z-index: 2;
+    position: fixed;
+    object-fit: contain;    /* ensures the whole image is shown */
+    cursor: url('images/pen.png') 16 16, grab;
+    
+}
+.scribblechords { 
+    display: none !important; 
+    cursor: url('images/pen.png') 16 16, grab;
+}
+
+/* Small thumbnails appended to the paper as history */
+.paper-scribble {
+    width: 150px;
+    height: 150px;
+    margin: 4px;
+    display: inline-block;
+    object-fit: contain;
+    vertical-align: middle;
+    border-radius: 4px;
+}
+#cableL {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+    height: 20px;
+    width: 100px;
+    display: inline-block;
+    background-image: linear-gradient(to top, rgb(20, 20, 20), rgb(80, 80, 80));
+    position: fixed;
+    left: 320px;
+    top: 510px;
+}
+
+#cableL1 {
+    height: 20px;
+    width: 50px;
+    background-image: linear-gradient(to top, rgb(20, 20, 20), rgb(80, 80, 80));
+    display: inline-block;
+    position: fixed;
+    left: 0px;
+    top:150px;
+}
+
+#cableO {
+    height: 30px;
+    width: 25px;
+    border-radius: 25%;
+    display: inline-block;
+    background-color: rgb(42, 42, 42);
+    position: fixed;
+    left: 500px;
+    top: 422px;
+}
+
+#jackL {
+    height: 40px;
+    width: 40px;
+    border-radius: 10%;
+    display: inline-block;
+    background-image: linear-gradient(to top, rgb(150, 150, 150), rgb(220, 220, 220));
+    box-shadow: 0 7px #555491;
+    position: fixed;
+    left: 30px;
+    top: 140px;
+}
+
+#jackR {
+    height: 40px;
+    width: 40px;
+    border-radius: 10%;
+    display: inline-block;
+    background-image: linear-gradient(to top, rgb(150, 150, 150), rgb(220, 220, 220));
+    box-shadow: 0 7px #555491;
+    position: fixed;
+    left: 310px;
+    top: 400px;
+}
+
+#jackL2 {
+    height: 40px;
+    width: 40px;
+    border-radius: 10%;
+    display: inline-block;
+    background-image: linear-gradient(to top, rgb(150, 150, 150), rgb(220, 220, 220));
+    box-shadow: 0 7px #555491;
+    position: fixed;
+    left: 385px;
+    top: 400px;
+}
+
+#jackO1 {
+    height: 13px;
+    width: 40px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    display: inline-block;
+    background-image: linear-gradient(to top, rgb(150, 150, 150), rgb(220, 220, 220));
+    box-shadow: 0 10px #555491;
+    position: fixed;
+    left: 493px;
+    top: 405px;
+}
+
+#jackO2 {
+    height: 40px;
+    width: 40px;
+    border-radius: 10%;
+    display: inline-block;
+    background-color: #555491;
+    position: fixed;
+    left: 493px;
+    top: 433px;
+}
+
+#box {
+    height: 500px;
+    width: 300px;
+    border-radius: 6%;
+    display: inline-block;
+    background-image: linear-gradient(to top,rgb(38, 82, 8), rgb(152, 84, 207));
+    box-shadow: 0 15px #0e2d16;
+    position: fixed;
+    left: 40px;
+    top: 100px;
+}
+
+#box2 {
+    height: 280px;
+    width: 480px;
+    border-radius: 6%;
+    display: inline-block;
+    background-image: linear-gradient(to top, rgb(38, 82, 8), rgb(118, 193, 114));
+    box-shadow: 0 15px #0e2d16;
+    position: fixed;
+    left: 400px;
+    top: 440px;
+}
+
+#box3{
+    height: 350px;
+    width: 300px;
+    border-radius: 6%;
+    display: inline-block;
+    background-image: linear-gradient(to top, rgb(38, 82, 8), rgb(118, 193, 114));
+    box-shadow: 0 15px #0e2d16;
+    position: fixed;
+    left: 400px;
+    top: 50px;
+}
+
+
+#button {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: url('images/hand%20select.png') 16 16, pointer;
+    background-image: linear-gradient(to top, rgb(40, 40, 40), rgb(199, 199, 199));
+    box-shadow: 0 7px #212121;
+    position: fixed;
+    left: 155px;
+    top: 400px;
+}
+
+#button:active {
+    box-shadow: 0 4px #0b0b0b;
+    transform: translateY(4px);
+}
+
+/* Visual state when the button is used to play the video */
+#button.playing {
+    box-shadow: 0 4px #0b0b0b;
+    transform: translateY(4px);
+}
+
+.pedalname{
+    color:#110507;
+}
+
+#pedalname {
+    font-family: Art Dystopia;
+    font-size: 40px;
+    position: fixed;
+    left: 80px;
+    top: 482px;
+}
+
+#pedalname2 {
+    font-family: Art Dystopia;
+    font-size: 60px;
+    position: fixed;
+    left: 79px;
+    top: 525px;
+}
+
+#pedalname3 {
+    font-family: Art Dystopia;
+    font-size: 40px;
+    color:#37662a;
+    position: fixed;
+    left: 81px;
+    top: 483px;
+}
+
+#pedalname4 {
+    font-family: Art Dystopia;
+    font-size: 60px;
+    color: #37662a;
+    position: fixed;
+    left: 78px;
+    top: 526px;
+}
+
+.led {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    box-shadow: 0 5px #555491;
+    display: inline-block;
+    position: fixed;
+    left: 170px;
+    top: 150px;
+    background-color: grey;
+    /* background-image: radial-gradient(circle at 15px 15px, rgb(255, 113, 111), red); */}
+
+#display {
+    height: 120px;
+    width: 220px;
+    border-radius: 10px;
+    display: inline-block;
+    position: fixed;
+    left: 78px;
+    top: 210px;
+    background-color: rgb(95, 162, 73);
+    box-shadow: 0 -7px #37662a;
+}
+
+#display2 {
+    height: 190px;
+    width: 400px;
+    border-radius: 10px;
+    display: inline-block;
+    position: fixed;
+    left: 440px;
+    top: 489px;
+    background-color: rgb(95, 162, 73);
+    box-shadow: 0 -10px #37662a;
+}
+
+#display2 video {
+    height: 190px;
+    width: 400px;
+    border-radius: 10px;
+    object-fit: cover;
+    image-rendering: pixelated;
+}
+
+#display3 {
+    height: 280px;
+    width: 250px;
+    border-radius: 10px;
+    display: inline-block;
+    position: fixed;
+    left: 425px;
+    top: 89px;
+    background-color: rgb(95, 162, 73);
+    box-shadow: 0 -10px #37662a;
+    background-image: url('chords dithered/dither_it_a5.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+#screenText {
+    font-family: "Digital-7";
+    font-size: 35px;
+    color: #294a1d;
+    text-shadow: 0 0 12px #0f0;
+    position: fixed;
+    left: 95px;
+    top: 230px;
+}
+
+/* Grouped override: change `top` here to move the right cable and jacks together */
+#jackR.group-right,
+#jackL2.group-right {
+    top: 500px; /* adjust this value */
+}
+
+/* Site background: tiled dither image (change `background-size` to control tile size) */
+html, body {
+    height: 100%;
+}
+body {
+    background-image: url(images/dither_it_kurti.jpg);
+    background-repeat: repeat;           /* tile the image */
+    background-size: 150px 150px;          /* size of each tile — change as needed */
+    background-position: top left;       /* where tiling starts */
+    background-attachment: fixed;        /* set to `scroll` if you want it to move */
+    /* Optional: keep the dithered image looking sharp when scaled in some browsers */
+    image-rendering: pixelated;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  position: relative;
+  top: 50px;
+  left: 635px;
+  z-index: 2;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+
+/* Style the back side */
+.flip-card-back {
+  image-rendering: pixelated;
+  transform: rotateY(180deg);
+}
+
+.playbutton {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: url('images/hand%20select.png') 16 16, pointer;
+    position: fixed;
+    top: 650px;
+    left: 70px;
+    z-index: 2;
+}
+
+#stopbutton {
+    backface-visibility: hidden;
+}
+
+#audiofield {
+    background-color: #717171;
+    border: 4px solid rgb(54, 54, 54);
+    position: fixed;
+    top: 630px;
+    bottom: 100px;
+    height: 100px;
+    width: 100px;
+    left: 48px;
+    z-index: 1;
+    box-shadow: 0 5px #232323;
+}
+
+#musiknote {
+    height: 130px;
+    width: 130px;
+    position: fixed;
+    top: 655px;
+    left: 80px;
+    z-index: 2;
+    image-rendering: pixelated;
+}
+
+#kurtvid {
+    position: fixed;
+    width: 420px;
+    height: 315px;
+    border: none;
+    cursor: url('images/hand%20cursor.png') 16 16, pointer;
+    image-rendering: pixelated;
+    display: block;
+}
+
+#kurtvid.dragging {
+    pointer-events: none;
+    cursor: url('images/hand%20select.png') 16 16, pointer;
+}
+
+/* Video control buttons cursor */
+#kurtvid::-webkit-media-controls-panel,
+#kurtvid::-webkit-media-controls-play-button,
+#kurtvid::-webkit-media-controls-fullscreen-button,
+#kurtvid::-webkit-media-controls-volume-slider {
+    cursor: url('images/hand%20select.png') 16 16, pointer !important;
+}
+
+.kurtvid-window {
+    position: fixed;
+    top: 430px;
+    left: 600px;
+    z-index: 10;
+    background: #000;
+    border: 2px solid #333;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    width: 420px;
+}
+
+.kurtvid-titlebar {
+    background: linear-gradient(to right, #1a1a1a, #2d2d2d);
+    color: #00ff00;
+    padding: 8px 12px;
+    font-family: 'Digital-7', monospace;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    border-bottom: 1px solid #444;
+    flex-shrink: 0;
+    z-index: 2;
+    cursor: url('images/hand%20cursor.png') 16 16;
+}
+
+.kurtvid-titlebar:active {
+    cursor: url('images/hand%20cursor.png') 16 16;
+}
+
+.kurtvid-title {
+    text-shadow: 0 0 5px #00ff00;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.kurtvid-minimize-btn {
+    background: #00ff00;
+    color: #575757;
+    border: 1px solid #009900;
+    padding: 2px 8px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 2px;
+    transition: all 0.2s ease;
+    font-family: monospace;
+    cursor: url('images/hand%20select.png') 16 16, pointer;
+}
+
+.kurtvid-minimize-btn:hover {
+    background: #00dd00;
+    cursor: url('images/hand%20select.png') 16 16;
+}
+
+.kurtvid-minimize-btn:active {
+    transform: scale(0.95);
+    cursor: url('images/hand%20cursor.png') 16 16;
+}
+
+.kurtvid-window.minimized {
+    width: 420px;
+    cursor: url('images/hand%20cursor.png') 16 16;
+}
+
+.kurtvid-window.minimized #kurtvid {
+    display: none;
+    cursor: url('images/hand%20cursor.png') 16 16;
+}
