@@ -9,14 +9,14 @@
 
 @font-face {
     font-family: 'Art Dystopia';
-    src: url('ArtDystopia.ttf') format('ttf');
+    src: url('ArtDystopia.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 h1 {
-    font-family: Art Dystopia;
+    font-family: 'Art Dystopia';
     font-size: 40px;
     color: #000000;
     text-shadow: 0 0 10px #00ff00;
@@ -314,7 +314,7 @@ body {
 }
 
 #pedalname {
-    font-family: Art Dystopia;
+    font-family: 'Art Dystopia';
     font-size: 40px;
     position: fixed;
     left: 80px;
@@ -322,7 +322,7 @@ body {
 }
 
 #pedalname2 {
-    font-family: Art Dystopia;
+    font-family: 'Art Dystopia';
     font-size: 60px;
     position: fixed;
     left: 79px;
@@ -330,7 +330,7 @@ body {
 }
 
 #pedalname3 {
-    font-family: Art Dystopia;
+    font-family: 'Art Dystopia';
     font-size: 40px;
     color:#37662a;
     position: fixed;
@@ -339,7 +339,7 @@ body {
 }
 
 #pedalname4 {
-    font-family: Art Dystopia;
+    font-family: 'Art Dystopia';
     font-size: 60px;
     color: #37662a;
     position: fixed;
